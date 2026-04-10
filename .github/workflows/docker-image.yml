@@ -14,7 +14,7 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.userdock }}
+          username: ${{ secrets.USERDOCK }}
           password: ${{ secrets.MASECRETKEYDOCKER }}
 
       - name: Build and push Backend
@@ -23,7 +23,7 @@ jobs:
           context: ./backend
           push: true
           # REMPLACE TON_PSEUDO ICI
-          tags: userdock/iris-backend:latest
+          tags: USERDOCK/iris-backend:latest
 
       - name: Build and push Frontend
         uses: docker/build-push-action@v5
@@ -31,4 +31,4 @@ jobs:
           context: ./frontend
           push: true
           # REMPLACE TON_PSEUDO ICI
-          tags: userdock/iris-frontend:latest
+          tags: USERDOCK/iris-frontend:latest
