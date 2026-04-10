@@ -1,0 +1,15 @@
+services:
+  # Le nom de ta boîte Backend
+  api-service:
+    build: ./backend
+    ports:
+      - "8000:8000"
+
+  # Le nom de ta boîte Frontend
+  web-service:
+    build: ./frontend
+    ports:
+      - "8501:8501"
+    # On dit au site web comment appeler l'API dans le tunnel Docker
+    environment:
+      - API_URL=http://api-service:8000

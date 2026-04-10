@@ -1,0 +1,32 @@
+artifact_path: /Users/ludovic.clairgery/Documents/DEV_ IA/Iris_Simplon/backend/ml/mlruns/1/models/m-e6a1281e89d74969b7f4f05e158ec45b/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.14.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.10.1
+model_id: m-e6a1281e89d74969b7f4f05e158ec45b
+model_size_bytes: 997
+model_uuid: m-e6a1281e89d74969b7f4f05e158ec45b
+prompts: null
+run_id: 9900f73421c1444ba2286d643b6eab8e
+signature:
+  inputs: '[{"type": "double", "name": "SepalLengthCm", "required": true}, {"type":
+    "double", "name": "SepalWidthCm", "required": true}, {"type": "double", "name":
+    "PetalLengthCm", "required": true}, {"type": "double", "name": "PetalWidthCm",
+    "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "object", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-04-07 11:21:41.070412'
